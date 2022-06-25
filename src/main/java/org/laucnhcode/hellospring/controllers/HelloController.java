@@ -18,7 +18,7 @@ public class HelloController {
     // path now /hello/goodbye
     @GetMapping("goodbye")
     public String goodbye() {
-        return "Goodbye, Spring!";
+        return "Goodbye, Spring! See ya later!";
     }
 
     // Handles requests of the form /hello?name=LaunchCode
@@ -38,7 +38,7 @@ public class HelloController {
     public String helloForm(){
         return "<html>" +
                     "<body>" +
-                        "<form action='hello' method='post'>" + // submit a request to /hello
+                        "<form action='/hello' method='post'>" + // submit a request to /hello
                             "<input type='text' name='name'>" +
                             "<input type='submit' value='Greet me!'>" +
                         "</form>" +
