@@ -36,7 +36,7 @@ public class HelloController {
     @GetMapping("form")
     @ResponseBody
     public String helloForm(){
-        return "<html>" +
+        String html = "<html>" +
                     "<body>" +
                         "<form action='/hello' method='post'>" + // submit a request to /hello
                             "<input type='text' name='name'>" +
@@ -44,6 +44,7 @@ public class HelloController {
                         "</form>" +
                     "</body>" +
                 "</html>";
+        return html;
     }
 
 }
